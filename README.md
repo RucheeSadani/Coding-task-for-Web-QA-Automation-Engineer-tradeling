@@ -1,0 +1,1 @@
+# Coding-task-for-Web-QA-Automation-Engineer-tradeling
