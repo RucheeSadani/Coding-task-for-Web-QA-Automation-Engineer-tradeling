@@ -35,5 +35,6 @@ it('Scenario 4',function(){
         let quantity=ele.text()
         expect(quantity).to.be.equals('1')
     })
+
 })
     

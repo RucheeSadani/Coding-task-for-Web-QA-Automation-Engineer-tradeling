@@ -22,6 +22,5 @@ it('Scenario 1',function(){
        let count1 = b.split(" ")
        expect(count[2]).to.be.equals(count1[2]) 
     })
-
 })
 })
