@@ -1,16 +1,14 @@
 /// <reference types="cypress" />
 
 it('Scenario 4',function(){
-    cy.reload()
     //open amazon site
     cy.visit("https://www.amazon.com/")
     //close popup
     cy.get('input[data-action-type="DISMISS"]').click()
-    //cy.get('.a-button a-spacing-top-base a-button-base glow-toaster-button glow-toaster-button-dismiss').click()
-    //From Search DDL, chose "Electronics"
+     //From Search DDL, chose "Electronics"
     cy.get('#twotabsearchtextbox').click().get('#searchDropdownBox').select('Electronics',{force: true})
     //Search for "Apple"
-    cy.get('#twotabsearchtextbox').type('Apple ',{timeout:20000})
+    cy.get('#twotabsearchtextbox').type('Apple')
     //click on apple iphone
     cy.get('#suggestions').contains('apple iphone').click()
     //click on Apple iphone XS Max

@@ -14,12 +14,13 @@ it('Scenario 1',function(){
     //Check the total number of results match the total displayed products
     cy.get('.a-box-inner > .a-color-base').then((el) =>{
        let a = el.text(); 
+       cy.log(a)
        cy.contains('See all results').click()
-       cy.get('span[dir="auto"]').eq(0).then((el)=>{
+       cy.get('.sg-col-14-of-20 > .sg-col-inner > .a-section > span').eq(0).then((el)=>{
        let b=el.text();
        let count = a.split(" ")
        let count1 = b.split(" ")
-       expect(count[2]).to.be.equal(count1[2]) //assertion will fail as the product count and products displayed do not match
+       expect(count[2]).to.be.equals(count1[2]) 
     })
 
 })
